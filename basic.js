@@ -1,6 +1,20 @@
+const { log } = require("console");
 const { username } = require("./data");
 
-console.log(username);
+// console.log(username);
+
+const fs = require("fs");
+
+fs.writeFileSync("dummy.txt", "trying with modules");
+
+const os = require("os");
+
+// console.log(os.platform());
+
+console.log(os.hostname());
+
+console.log(os.machine());
+console.log(os.version());
 
 // const { log } = require("console");
 

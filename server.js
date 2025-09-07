@@ -7,15 +7,18 @@
 //   })
 //   .listen(4700);
 
-const http = require("http");
+// const http = require("http");
 
-http
-  .createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write("server created<br>");
-    res.write("<h1>Hello</h1>");
-    res.end("end the server");
-  })
-  .listen(4800, () => {
-    console.log("Server running on http://localhost:4800");
-  });
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "text/html" });
+//     res.write("server created<br>");
+//     res.write("<h1>Hello</h1>");
+//     res.end("end the server");
+//   })
+//   .listen(4800, () => {
+//     console.log("Server running on http://localhost:4800");
+//   });
+
+const http = require("http");
+http.createServer().listen(4520);

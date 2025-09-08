@@ -20,6 +20,15 @@
 //     console.log("Server running on http://localhost:4800");
 //   });
 
+const { log } = require("console");
+const math = require("./math");
+
+console.log("Addition:-", math.addn(45, 60));
+console.log("Substraction:-", math.subn(45, 12));
+
+console.log("Multiplication", math.mul(4, 5));
+console.log("Division", math.div(6, 2));
+
 const http = require("http");
 http
   .createServer((req, resp) => {

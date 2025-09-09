@@ -1,7 +1,7 @@
 var colors = require("colors");
 const { log } = require("console");
 console.log("I am exploring the color".rainbow);
-console.log("I am ecploring the color".rainbow);
+console.log("I am ecploring the color".yellow);
 
 const http = require("http");
 

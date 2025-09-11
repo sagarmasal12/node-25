@@ -35,6 +35,7 @@ http
   .createServer((req, resp) => {
     // resp.writeHead(200, { "Content-Type": "text/html" });
     fs.readFile("html/web.html", "utf-8", (error, data) => {
+      debugger;
       if (error) {
         resp.writeHead(500, { "Content-Type": "text/plain" });
         resp.end("Internal Server Error");

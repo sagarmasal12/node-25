@@ -29,7 +29,9 @@ http
             readableData.name +
             " and Email is " +
             readableData.email;
-          console.log(dataString);
+          // console.log(dataString);
+          fs.writeFileSync("text/" + readableData.name + ".txt", dataString);
+          console.log("File created");
         });
         resp.write("Data Submitted");
       }

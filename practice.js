@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const { buffer } = require("stream/consumers");
 const queryString = require("querystring");
+const { log } = require("console");
 
 http
   .createServer((req, resp) => {
@@ -23,7 +24,12 @@ http
           let raw = Buffer.concat(dataBody).toString();
           console.log(raw);
           let readableData = queryString.parse(raw);
-          console.log(readableData);
+          let dataString =
+            "My Name is " +
+            readableData.name +
+            " and Email is " +
+            readableData.email;
+          console.log(dataString);
         });
         resp.write("Data Submitted");
       }

@@ -30,8 +30,25 @@ http
             " and Email is " +
             readableData.email;
           // console.log(dataString);
-          fs.writeFileSync("text/" + readableData.name + ".txt", dataString);
-          console.log("File created");
+
+          // this is synchronous way to create file
+          // fs.writeFileSync("text/" + readableData.name + ".txt", dataString);
+          // console.log("File created");
+
+          // this is asynchronous way to create file
+          fs.writeFile(
+            "text/" + readableData.name + ".txt",
+            dataString,
+            "utf-8",
+            (err) => {
+              if (err) {
+                resp.end("Internal Server Error");
+              } else {
+                console.log("File Created");
+              }
+            }
+          );
+          console.log("File Created");
         });
         resp.write("Data Submitted");
       }
